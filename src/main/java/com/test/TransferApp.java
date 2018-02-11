@@ -7,15 +7,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class TransferApp {
+    private static final String patternNumber = "(\\w{3}\\s)(\\d{5})";
+    private static final String patternDistance = "(\\w{2}\\s+)(\\d{1,4}\\.\\d{3})(.*)";
+    private static final String patternHorizontalAngel = "(\\w{2}\\s+)(\\d{1,3}\\.\\d{4})(.*)";
+    private static final String patternVerticalAngel = "(\\w{1}\\d{1}\\s+)(\\d{1,3}\\.\\d{4})(.*)";
 
     public static void main(String[] args) throws IOException {
 //        String inputFilePath = args[0];
 //        String outputFilePath = args[1];
-
-        String patternNumber = "(\\w{3}\\s)(\\d{5})";
-        String patternDistance = "(\\w{2}\\s+)(\\d{1,4}\\.\\d{3})(.*)";
-        String patternHorizontalAngel = "(\\w{2}\\s+)(\\d{1,3}\\.\\d{4})(.*)";
-        String patternVerticalAngel = "(\\w{1}\\d{1}\\s+)(\\d{1,3}\\.\\d{4})(.*)";
 
         String inputFilePath = "D:\\Леша\\WP\\2018\\borodai\\180208.dat";
         String outputFilePath = "out2.txt";
